@@ -1,0 +1,35 @@
+{
+  "name": "utm-dot-codes",
+  "version": "1.7.3",
+  "description": "A plugin that makes building analytics friendly links quick and easy.",
+  "main": "index.js",
+  "scripts": {
+    "commands": "npm run help",
+    "delete-maps": "find ./ -name '*.map' -delete",
+    "dev": "npm run development",
+    "development": "NODE_ENV=development parallel-webpack --config=webpack.config.js -p=4 --watch",
+    "help": "flickerbox-build -- help",
+    "prod": "npm run production",
+    "production": "NODE_ENV=production parallel-webpack --config=webpack.config.js -p=12 --max-retries=2 --no-stats && npm run delete-maps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asdfdotdev/utm.codes.git"
+  },
+  "author": "Chris Carlevato",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/asdfdotdev/utm.codes/issues"
+  },
+  "homepage": "https://utm.codes",
+  "devDependencies": {
+    "@flickerbox/build": "^20.10.1"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "last 2 iOS major versions",
+    "IE >= 11"
+  ]
+}
