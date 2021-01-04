@@ -568,7 +568,7 @@ class UtmDotCodes {
 											esc_html( $value )
 										);
 									},
-									array( 'None', 'Bitly', 'Rebrandly' )
+									array( 'None', 'Bitly', 'Rebrandly', 'Cuttly' )
 								);
 
 								print( '</select>' );
@@ -1010,6 +1010,13 @@ class UtmDotCodes {
 					get_option( self::POST_TYPE . '_rebrandly_domains_active' )
 				);
 				break;
+       
+      case 'cuttly':
+				require_once 'shorten/class-cuttly.php';
+				$shortener = new \UtmDotCodes\Cuttly(
+					get_option( self::POST_TYPE . '_apikey' )
+				);
+				break;       
 
 			case 'none':
 			default:
